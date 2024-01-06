@@ -1,0 +1,8 @@
+# Main.synctex klasörünü hariç tut
+main.synctex/
+
+# Main.synctex.gz arşivini hariç tut
+main.synctex.gz
+
+# Main.pdf dosyasını hariç tut
+main.pdf
