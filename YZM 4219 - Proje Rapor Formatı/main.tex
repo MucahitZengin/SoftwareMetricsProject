@@ -466,6 +466,7 @@ Bu metrikler ve karşılık gelen tasarım özellikleri Tablo \ref{table:1}'de g
 	\label{table:1}
 \end{table}
 
+Kullanılan tasarım özellikleri ve bu özelliklere karşılık gelen kalite metrikleri, belirli bir yazılım tasarım metodolojisinin çeşitli yönlerini değerlendirmek için seçilmiştir. Bu özellikler ve metrikler, yazılımın genel kalitesini etkileyen önemli faktörler olarak tanımlanmıştır. Tasarım özellikleri ve bunlara karşılık gelen kalite metrikleri, Tablo \ref{table:2}’de gösterilmiştir.
 
 \begin{table}[h]
 	\centering
@@ -485,9 +486,12 @@ Bu metrikler ve karşılık gelen tasarım özellikleri Tablo \ref{table:1}'de g
 		Complexity          &         & -0.33  &        &        &        &        \\ \hline
 	\end{tabular}
 	\caption{Kalite Özellikleri İle Kalite Metrikleri
-		Hesaplama (\textit{L}\textsubscript{21} Dönüşümü)
+		Hesaplama
 	}
+	\label{table:2}
 \end{table}
+
+Yazılımın tekrar kullanılabilirliği, esnekliği, anlaşılabilirliği, işlevselliği, genişletilebilirliği ve etkinliği gibi altı temel kalite niteliğinin hesaplanmasında, \ref{equ:reuse}, \ref{equ:flexibility}, \ref{equ:understandability}, \ref{equ:functionality}, \ref{equ:extensibility} ve \ref{equ:efficiency} denklemleri kullanılmıştır.
 
 \begin{equation}
 	\textit{Tekrar Kullanılabilirlik} =
@@ -561,53 +565,60 @@ Bu metrikler ve karşılık gelen tasarım özellikleri Tablo \ref{table:1}'de g
 \end{equation}
 
 \subsection{Kullanılan Araçlar}
-
-Bu bölümde, kullanılan araçları tanıtıp bu araçlarla ilgili detaylara yer verebilirsiniz.
-
-Bu çalışmada, çeşitli programlama dilleri ve analitik araçlar kullanılmıştır. İlk aşamada, Python programlama dili ile analiz yapılması planlanmıştır. Bu süreçte, SonarQube aracı Docker üzerinden çalıştırılmış, ancak Python dili için yeterli metrik toplama araçlarının olmaması nedeniyle Java diline geçiş yapılmıştır. Bu geçişte, QMOOD modelinin akademik alanda yaygın kullanımı gibi faktörler de dikkate alınmıştır.
-
-Java programlama dili için Eclipse ve Intellij Idea IDE'lerindeki CodeMR gibi araçlar denense de, CodeMR'ın web sitesine erişim sağlanamaması nedeniyle bu araçlar kullanılamamıştır.
-
-Araştırmanın ilerleyen aşamalarında, C\# programlama dili, Visual Studio 2022 IDE'si ve NDepend aracı tercih edilmiştir. Bu süreçte NDepend aracının, kütüphane gibi yapılar üzerinde analiz yapamadığı gözlemlenmiştir. Bu nedenle, çalıştırılabilir bir proje olarak ImageGlass seçilmiştir. NDepend eklentisi, CQLinq (Code Query LINQ) özelliği sayesinde, .NET kodunu LINQ sorguları aracılığıyla sorgulama imkanı sunmuştur. CQLinq, NDepend'in NDepend.CodeModel isim alanındaki tipler üzerine kurulu özel bir LINQ sorgu dilidir ve bu sayede, Visual Studio içerisinden doğrudan kod üzerinde karmaşık sorgular yapılmasını mümkün kılmıştır. Bu özellik, gerekli metriklerin toplanmasında etkili olmuştur. Elde edilen metrikler, Microsoft Excel kullanılarak tablo ve grafiklere dönüştürülmüştür.
+Bu çalışmada python dili için yeterli metrik toplama araçlarının bulunamaması ve java dili için CodeMR aracına erişim sağlanamaması nedeniyle, C\# programlama dili, Visual Studio 2022 IDE'si ve NDepend aracı tercih edilmiştir. Bu süreçte NDepend aracının, kütüphane gibi yapılar üzerinde analiz yapamadığı gözlemlenmiştir. Bu nedenle, çalıştırılabilir bir proje olarak ImageGlass seçilmiştir. NDepend eklentisi, CQLinq (Code Query LINQ) özelliği sayesinde, .NET kodunu LINQ sorguları aracılığıyla sorgulama imkanı sunmuştur. Bu süreç ve sonuçlar Şekil \ref{sekil1}'de gösterilmiştir. CQLinq, NDepend'in NDepend.CodeModel isim alanındaki tipler üzerine kurulu özel bir LINQ sorgu dilidir ve bu sayede, Visual Studio içerisinden doğrudan kod üzerinde karmaşık sorgular yapılmasını mümkün kılmıştır. Bu özellik, gerekli metriklerin toplanmasında etkili olmuştur. Elde edilen metrikler, Microsoft Excel kullanılarak tablo ve grafiklere dönüştürülmüştür.
 
 Her ne kadar bazı araçlar beklenen sonuçları vermemiş olsa da, bu deneyimler araştırma metodolojisinin geliştirilmesine katkıda bulunmuştur.
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{ndepend.jpg}
+	\caption{NDepend aracı kullanılarak gerçekleştirilen CQLinq sorguları ve bu sorguların sonucunda elde edilen QMOOD metrikleri}
+	\label{sekil1}
+\end{figure}
+
 \section{DEĞERLENDİRME}
-Bu bölümde, elde ettiğiniz değerlendirme sonuçlarını tablo, resim gibi destekleyici içeriklerle açıklabilirsiniz.
+Bu bölüm, QMOOD modeli kullanılarak yapılan analizle elde edilen sonuçları sunar. Elde edilen metrikler, farklı sürümler arasında karşılaştırma yapabilmek için normalizasyon işlemine tabi tutulmuştur. Böylece, yazılımın gelişiminin ve kalitesinin zaman içindeki evrimi ortaya konulmuştur.
+
+Değerlendirme sürecinde özellikle, DAM (Data Access Metric) değeri dikkate değer bir düşüş göstermiştir (Şekil \ref{sekil2}). DAM, private ve protected özelliklerin sayısının tüm özelliklere oranı olarak tanımlanır ve [0,1] aralığında değerler alır. Yüksek bir DAM değeri tercih edildiği için, bu düşüşün analizi ve nedenleri, yazılımın gizlilik ve kapsülleme yönünden değerlendirilmesi açısından önemlidir. 
+
+DSC (Design Size in Classes) metriğinde bir artış gözlemlenmiştir. DSC, tasarımdaki toplam sınıf sayısını ifade eder ve bu artış, projenin karmaşıklığının ve genişliğinin bir göstergesi olarak yorumlanabilir. DSC'deki bu artış, projenin kapsam ve yapısındaki genişlemeyi temsil eder ve yazılımın genel yapısının daha karmaşık hale geldiğini gösterir.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.6]{metrik.png}
 	\caption{Tasarım Metrikleri}
-	\label{sekil1}
+	\label{sekil2}
 \end{figure}
+
+Sürümler arası değerlendirme, Reusability ve Flexibility'de artış olduğunu, Functionality, Understandability ve Effectiveness'in sabit kaldığını ve Extendibility'nin önemli ölçüde geliştiğini göstermiştir (Şekil \ref{sekil3}). Understandability'nin negatif değerleri, bu özelliğin düşük olmasının tercih edildiğini belirtir, bu da yazılımın anlaşılmasının ve öğrenilmesinin kolay olduğunu ifade eder. Bu sabit negatif değerler, tasarımın anlaşılabilirliğinin zaman içinde tutarlı bir şekilde korunduğunu gösterir.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.6]{nitelik.png}
 	\caption{Kalite Nitelikleri}
-	\label{sekil2}
+	\label{sekil3}
 \end{figure}
+
+8 sürümlerinde 8.0'dan 8.5'e kadar olan dönemde TQI değerlerinde gözlenen minimal artış, bu sürümler arasındaki iyileştirmelerin kalite üzerinde yalnızca küçük etkiler yarattığını göstermektedir (Şekil \ref{sekil4}). Buna karşın, 9 sürümlerinde, henüz 9.1 sürümü yayınlanmadan önce TQI'de yaşanan önemli artış, büyük olasılıkla, yazılımın temel yapısında ve kullanıcıya sunulan özelliklerde gerçekleştirilen önemli iyileştirmelerin ve yeniliklerin bir sonucudur. Bu durum, 9 sürümlerinin, kullanıcı ihtiyaçlarına ve pazar taleplerine hızlı bir şekilde yanıt verme kapasitesinin güçlendiğini ve yazılım kalitesinin belirgin bir şekilde iyileştirildiğini düşündürmektedir.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.6]{tqi.png}
 	\caption{TQI}
-	\label{sekil3}
+	\label{sekil4}
 \end{figure}
+
+Bu değerlendirmeler, yazılımın genel kalitesini, sürdürülebilirliğini ve performansını kapsamlı bir şekilde ele almakta ve bu alanlarda iyileştirme için potansiyel alanları ortaya koymaktadır.
 
 \section{SONUÇ}
 
-Bu çalışma, tasarım metrikleri ve tasarım özellikleri arasındaki ilişkileri derinlemesine inceleyerek, yazılım mühendisliği alanında önemli bir katkı sağlamıştır. Araştırmanın temel amacı, çeşitli tasarım özelliklerinin, yazılım kalitesi üzerindeki etkilerini nicel olarak değerlendirmekti. Bu amaç doğrultusunda, Design Size, Coupling, Cohesion gibi özellikler üzerinde yoğunlaşılmış ve bu özelliklerin yazılımın tekrar kullanılabilirliği, esnekliği, anlaşılabilirliği, işlevselliği, genişletilebilirliği ve etkinliği üzerindeki etkileri analiz edilmiştir.
+Araştırmanın temel amacı, çeşitli tasarım özelliklerinin, yazılım kalitesi üzerindeki etkilerini nicel olarak değerlendirmekti. Bu amaç doğrultusunda, Design Size, Coupling, Cohesion gibi özellikler üzerinde yoğunlaşılmış ve bu özelliklerin yazılımın tekrar kullanılabilirliği, esnekliği, anlaşılabilirliği, işlevselliği, genişletilebilirliği ve etkinliği üzerindeki etkileri analiz edilmiştir.
 
 Çalışmanın bulguları, yazılım tasarımının kalitesinin, belirli metrikler üzerinden ölçülebileceğini ve bu metriklerin yazılımın genel kalitesi üzerinde doğrudan etkileri olduğunu göstermektedir. Örneğin, Design Size ve Coupling metriklerinin, yazılımın tekrar kullanılabilirliği ve esnekliği üzerinde önemli etkileri tespit edilmiştir. Bu sonuçlar, yazılım tasarım süreçlerinin iyileştirilmesi ve daha kaliteli yazılım ürünlerinin geliştirilmesi konusunda önemli ipuçları sunmaktadır.
 
 Bununla birlikte, çalışmanın kapsamındaki sınırlamalar da göz önünde bulundurulmalıdır. Araştırma, belirli bir yazılım türü ve ölçek üzerinde yapılmış olup, bulguların diğer yazılım türleri ve ölçekler üzerinde tekrar değerlendirilmesi gerekebilir. Ayrıca, tasarım metriklerinin farklı yazılım geliştirme ortamlarında nasıl değişkenlik gösterebileceği konusu, gelecekteki araştırmalar için önemli bir alan olarak belirlenmiştir.
 
-Sonuç olarak, bu çalışma, yazılım mühendisliği alanında, tasarım kalitesini değerlendirmek ve geliştirmek için kullanılabilecek önemli metrikler ve ölçütler sunmaktadır. Elde edilen bulguların, yazılım geliştirme süreçlerinin daha etkin ve verimli hale getirilmesine katkıda bulunacağına inanılmaktadır. Gelecekteki çalışmaların, bu araştırmanın temelleri üzerine inşa edilerek, yazılım tasarım ve kalite değerlendirme metodolojilerini daha da ileriye taşıyacağı umulmaktadır.
-
-\textbf{HATIRLATMA:} Metinde yer alan tüm formül, tablo, resim, referans vb. içerikleri en az 1 kez metin içerisinde atıflayınız.
-Bu bir referans alıntısıdır: \cite{label}.
+Sonuç olarak, bu çalışma, yazılım mühendisliği alanında, tasarım kalitesini değerlendirmek ve geliştirmek için kullanılabilecek metrikler ve ölçütler sunmaktadır. Elde edilen bulguların, yazılım geliştirme süreçlerinin daha etkin ve verimli hale getirilmesine katkıda bulunacağına inanılmaktadır. Gelecekteki çalışmaların, bu araştırmanın temelleri üzerine inşa edilerek, yazılım tasarım ve kalite değerlendirme metodolojilerini daha da ileriye taşıyacağı umulmaktadır.
 
 \begin{thebibliography}{1}
 	
@@ -627,7 +638,5 @@ Bu bir referans alıntısıdır: \cite{label}.
 	ISO “ISO,IEC 9126”,http://www.iso.org
 	
 \end{thebibliography}
-
-
 
 \end{document}

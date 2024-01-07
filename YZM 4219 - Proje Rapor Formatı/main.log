@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2024.1.6)  7 JAN 2024 02:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2024.1.6)  7 JAN 2024 20:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -375,46 +375,45 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 422.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 422.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[2]
-Underfull \hbox (badness 2961) in paragraph at lines 568--569
-[]\T1/ptm/m/n/10 Java pro-gram-lama dili için Eclipse ve In-tel-lij Idea
- []
-
-<metrik.png, id=16, 401.865pt x 217.467pt>
+ [2]
+<ndepend.jpg, id=16, 496.85625pt x 566.71725pt>
+File: ndepend.jpg Graphic file (type jpg)
+<use ndepend.jpg>
+Package pdftex.def Info: ndepend.jpg  used on input line 574.
+(pdftex.def)             Requested size: 248.4275pt x 283.35793pt.
+<metrik.png, id=17, 401.865pt x 217.467pt>
 File: metrik.png Graphic file (type png)
 <use metrik.png>
-Package pdftex.def Info: metrik.png  used on input line 579.
+Package pdftex.def Info: metrik.png  used on input line 588.
 (pdftex.def)             Requested size: 241.12086pt x 130.48119pt.
-<nitelik.png, id=18, 401.208pt x 217.467pt>
+<nitelik.png, id=19, 401.208pt x 217.467pt>
 File: nitelik.png Graphic file (type png)
 <use nitelik.png>
-Package pdftex.def Info: nitelik.png  used on input line 586.
+Package pdftex.def Info: nitelik.png  used on input line 597.
 (pdftex.def)             Requested size: 240.72665pt x 130.48119pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<tqi.png, id=19, 401.208pt x 217.248pt>
+ [3 <./ndepend.jpg> <./metrik.png> <./nitelik.png>]
+<tqi.png, id=25, 401.208pt x 217.248pt>
 File: tqi.png Graphic file (type png)
 <use tqi.png>
-Package pdftex.def Info: tqi.png  used on input line 593.
+Package pdftex.def Info: tqi.png  used on input line 606.
 (pdftex.def)             Requested size: 240.72665pt x 130.3498pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 2103) in paragraph at lines 600--601
-\T1/ptm/m/n/10 amac^^Y, çe³itli tasar^^Ym özel-lik-lerinin, yaz^^Yl^^Ym kalites
-i üz-
+Underfull \hbox (badness 10000) in paragraph at lines 611--612
+[]\T1/ptm/m/n/10 Bu de§er-lendirmeler, yaz^^Yl^^Ym^^Yn genel kalitesini,
  []
 
 
-LaTeX Warning: Citation `label' on page 3 undefined on input line 609.
+Underfull \hbox (badness 1635) in paragraph at lines 611--612
+\T1/ptm/m/n/10 sürdürülebilir-li§ini ve per-for-man-s^^Yn^^Y kap-saml^^Y bir ³e
+k-ilde
+ []
 
-[3 <./metrik.png> <./nitelik.png> <./tqi.png>]
+
+Underfull \hbox (badness 2158) in paragraph at lines 615--616
+\T1/ptm/m/n/10 yaz^^Yl^^Ym kalitesi üz-erindeki etk-i-lerini ni-cel olarak de§e
+r-
+ []
+
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -426,26 +425,20 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4
-
-] (main.aux)
+[4 <./tqi.png>] (main.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-12-11>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 4790 strings out of 474494
- 81361 string characters out of 5743915
+ 4798 strings out of 474494
+ 81496 string characters out of 5743915
  1955460 words of memory out of 5000000
- 27048 multiletter control sequences out of 15000+600000
+ 27056 multiletter control sequences out of 15000+600000
  661460 words of font info for 127 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 69i,9n,79p,881b,349s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 69i,9n,79p,1060b,301s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/mczen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmex10.pfb><C:/Users/mczen/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmmi10.pfb><C:/Users/mczen/AppData/Local/Programs/MiKTeX/fonts/type1/p
@@ -455,9 +448,9 @@ TeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/mczen/AppData/Local/Programs/MiK
 TeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/mczen/AppData/Local/Programs/Mi
 KTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/mczen/AppData/Local/Programs/Mi
 KTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (4 pages, 280776 bytes).
+Output written on main.pdf (4 pages, 472972 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
+ 64 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
