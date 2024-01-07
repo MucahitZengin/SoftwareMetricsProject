@@ -403,13 +403,13 @@ Bu çalışma, yazılım mühendisliği alanında kalite değerlendirmesi yapman
 
 Yazılım kalitesinin ölçülmesi ve değerlendirilmesi, yazılım mühendisliği alanında sürekli gelişen ve önem kazanan bir konudur. Özellikle, nesneye dayalı programlama paradigmalarının yaygınlaşmasıyla birlikte, bu alandaki kalite değerlendirme modelleri ve metrikleri üzerine birçok çalışma yapılmıştır. Bu çalışmalar, yazılımın sürdürülebilirliği, esnekliği ve genel performansını etkileyen önemli faktörleri belirlemeyi amaçlamaktadır.
 
-QMOOD (Quality Model for Object-Oriented Design) modeli, nesneye dayalı yazılım tasarım kalitesini değerlendirmek için geliştirilmiş bir modeldir ve bu alanda yapılan çalışmaların merkezinde yer alır. Örneğin, Bansiya ve Davis [1], QMOOD modelini kullanarak nesneye dayalı tasarım kalitesini değerlendiren bir hiyerarşik model geliştirmişlerdir. Bu model, yazılımın çeşitli tasarım özelliklerini ve bu özelliklerin kalite üzerindeki etkilerini inceler.
+QMOOD (Quality Model for Object-Oriented Design) modeli, nesneye dayalı yazılım tasarım kalitesini değerlendirmek için geliştirilmiş bir modeldir ve bu alanda yapılan çalışmaların merkezinde yer alır. Örneğin, Bansiya ve Davis\cite{bansiyadavis}, QMOOD modelini kullanarak nesneye dayalı tasarım kalitesini değerlendiren bir hiyerarşik model geliştirmişlerdir. Bu model, yazılımın çeşitli tasarım özelliklerini ve bu özelliklerin kalite üzerindeki etkilerini inceler.
 
-Yazılım kalitesi ölçüm tekniklerine geniş bir bakış sunan ve bu alandaki mevcut yaklaşımları ve zorlukları tartışan bir çalışma [2], yazılım kalitesinin çeşitli boyutlarını ve bu boyutların ölçümünde kullanılan teknikleri derinlemesine incelemektedir.
+Yazılım kalitesi ölçüm tekniklerine geniş bir bakış sunan ve bu alandaki mevcut yaklaşımları ve zorlukları tartışan bir çalışma\cite{ozcevik}, yazılım kalitesinin çeşitli boyutlarını ve bu boyutların ölçümünde kullanılan teknikleri derinlemesine incelemektedir.
 
-Ayrıca, yazılım kalitesi ölçümünde kullanılan diğer yaklaşımlar da literatürde yer almaktadır. McCall ve diğerleri [3] tarafından geliştirilen yazılım kalite modeli, yazılım paydaşları arasında iletişimi güçlendirmeyi ve yazılımın farklı kalite faktörlerini belirlemeyi amaçlar. Victor Basili'nin Hedef/Soru/Metrik (GQM) yaklaşımı [4], yazılım projelerindeki hataları belirlemek ve yazılım kalitesini geliştirmek için kullanılan bir yöntemdir.
+Ayrıca, yazılım kalitesi ölçümünde kullanılan diğer yaklaşımlar da literatürde yer almaktadır. McCall ve diğerleri\cite{mccall} tarafından geliştirilen yazılım kalite modeli, yazılım paydaşları arasında iletişimi güçlendirmeyi ve yazılımın farklı kalite faktörlerini belirlemeyi amaçlar. Victor Basili'nin Hedef/Soru/Metrik (GQM) yaklaşımı\cite{basili}, yazılım projelerindeki hataları belirlemek ve yazılım kalitesini geliştirmek için kullanılan bir yöntemdir.
 
-ISO/IEC 9126 standardı [5], yazılım kalitesi ile ilgili tanımlamaları ve ölçütleri standartlaştırmayı amaçlar. Bu standart, yazılım kalitesinin farklı boyutlarını tanımlar ve yazılım mühendisleri arasında ortak bir dil oluşturmayı hedefler.
+ISO/IEC 9126 standardı\cite{isoiec9126}, yazılım kalitesi ile ilgili tanımlamaları ve ölçütleri standartlaştırmayı amaçlar. Bu standart, yazılım kalitesinin farklı boyutlarını tanımlar ve yazılım mühendisleri arasında ortak bir dil oluşturmayı hedefler.
 
 Bu çalışmaların ışığında, QMOOD modeli ve diğer kalite değerlendirme araçlarının, nesneye dayalı yazılım projelerinin kalitesini ölçmede etkili olduğu görülmektedir. Bu çalışma, ImageGlass projesinin farklı sürümlerini bu modeller ve metrikler kullanarak değerlendirip, yazılım tasarım kalitesinin zaman içindeki değişimini analiz etmeyi amaçlamaktadır.
 
@@ -432,6 +432,7 @@ Bu çalışmada, yazılım tasarım kalitesini değerlendirmek için QMOOD model
 	\item \textbf{Number of Methods (NOM):} Projedeki toplam metod sayısı olarak ele alınmıştır.
 \end{itemize}
 
+Bu metrikler ve karşılık gelen tasarım özellikleri Tablo \ref{table:1}'de gösterilmiştir.
 \begin{table}[h]
 	\centering
 	\begin{tabular}{|c|c|}
